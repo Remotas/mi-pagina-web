@@ -1,1 +1,46 @@
+﻿/* 
+	Escuela - Adaptación basada para ejercicio
+	Marquesina: Frase en movimiento sobre parques naturales.
+*/
 
+/* Marquesina */
+#marquee-section {
+    background-color: #333; /* Fondo del pie de página (puedes ajustar el color aquí) */
+    padding: 20px 0; /* Espaciado superior e inferior */
+}
+
+.marquee-container {
+    background-color: #000; /* Fondo negro para la caja que contiene el texto */
+    overflow: hidden; /* Oculta el texto que sale de los límites */
+    white-space: nowrap; /* Evita que el texto se rompa en varias líneas */
+    position: relative;
+    width: 100%; /* Toma el ancho completo */
+    height: 50px; /* Altura de la caja */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px; /* Bordes redondeados opcionales */
+}
+
+.marquee {
+    display: inline-block;
+    animation: scroll-marquee 10s linear infinite; /* Animación infinita */
+}
+
+    .marquee span {
+        color: yellow; /* Color del texto */
+        font-weight: bold; /* Texto en negrita */
+        font-size: 1.5em; /* Tamaño del texto */
+        white-space: nowrap;
+    }
+
+/* Animación para movimiento de derecha a izquierda */
+@keyframes scroll-marquee {
+    0% {
+        transform: translateX(100%); /* Comienza fuera del contenedor (a la derecha) */
+    }
+
+    100% {
+        transform: translateX(-100%); /* Se mueve completamente hacia la izquierda */
+    }
+}
